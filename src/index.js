@@ -5,7 +5,7 @@ import './index.css'
 function NumberList(props) {
     const numbers = props.numbers;
     const listItems = numbers.map((number) =>
-        <li>
+        <li key={number.toString()}>
             {number}
         </li>
     );
