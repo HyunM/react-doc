@@ -2,6 +2,12 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
 
+function FormattedDate(props) {
+    return <h2>It is
+    {props.date.toLocaleTimeString()}.</h2>;
+}
+
+
 class Clock extends React.Component {
     constructor(props) {
         super(props);
