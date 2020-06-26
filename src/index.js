@@ -37,11 +37,21 @@ class Clock extends React.Component {
                 <h1>Hello, world!</h1>
                 <FormattedDate date={this.state.date} />
             </div>
-        );
+        )
     }
 }
 
+function App() {
+    return (
+        <div>
+            <Clock />
+            <Clock />
+            <Clock />
+        </div>
+    )
+}
+
 ReactDOM.render(
-    <Clock />,
+    <App />,
     document.getElementById('root')
 );
