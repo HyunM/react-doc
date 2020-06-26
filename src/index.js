@@ -5,7 +5,7 @@ import './index.css'
 class NameForm extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {value: 'Please Write an essay about your facorite DOM element'};
+        this.state = {value: 'coconut'};
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -16,7 +16,7 @@ class NameForm extends React.Component {
     }
 
     handleSubmit(event) {
-        alert('A name was submitted: ' + this.state.value);
+        alert('Your favorite flavor is: ' + this.state.value);
         event.preventDefault();
     }
 
@@ -24,8 +24,13 @@ class NameForm extends React.Component {
         return(
             <form onSubmit={this.handleSubmit}>
                 <label>
-                    Name:
-                    <input type="text" value={this.state.value} onChange={this.handleChange} />
+                    Pick your favorite flavor:
+                    <select value={this.state.value} onChange={this.handleChange}>
+                        <option value="grapefruit">grapefruit</option>
+                        <option value="lime">lime</option>
+                        <option value="coconut">coconut</option>
+                        <option value="mango">mango</option>
+                    </select>
                 </label>
                 <input type="submit" value="Submit" />
             </form>
